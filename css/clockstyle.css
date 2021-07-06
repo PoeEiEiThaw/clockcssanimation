@@ -1,0 +1,323 @@
+{
+	margin: 0;
+}
+nav ul{
+	list-style: none;
+}
+nav ul li{
+	float: left;
+	width: 250px;
+	line-height: 50px;
+	background-color: hotpink;
+	border-right: 3px solid darkviolet;
+	text-align: center;
+	
+
+	transition: background-color 1s;
+
+}
+nav ul li:first-of-type{
+	border-left: 3px solid darkviolet;
+}
+
+nav ul li:hover{
+	background-color: palevioletred;
+
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: white;
+}
+
+
+.pointer{
+	
+	border-bottom-right-radius: 90%;
+	position: absolute;
+	display: none;
+	justify-content: left;
+	
+
+	transform: translate(-2px,-0px);
+	border-left:20px solid rebeccapurple;
+	border-top: 10px solid rebeccapurple;
+	border-bottom: 10px solid rebeccapurple;
+
+}
+
+nav ul li:hover .pointer{
+	display: flex;
+}
+nav ul li a:focus .pointer{
+	display: flex;
+}
+
+h2, .br{
+	clear: both;
+	margin-left: 350px;	
+}
+.container{
+	width: 400px;
+	height: 400px;
+	background-color: hotpink;
+	margin-left: 150px;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+}
+.c1{
+	width: 200px;
+	height: 200px;
+	background-color: darkviolet;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 4;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	color: #fff;
+
+}
+.c2{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background: conic-gradient(
+		
+		yellow  33%,
+		green 0 67%,
+		red 0
+		);
+	
+	
+	animation-name: rotation;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function:linear;
+
+	z-index: 1;
+}
+@keyframes rotation{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+.clock{
+	width: 300px;
+	height: 300px;
+	background: conic-gradient(
+		gray 25%,
+		violet 0 50%,
+		gray 0 75%,
+		violet 0 100%
+		);
+	float: left;
+	margin-left: 100px;
+	border-radius: 50%;
+	position: relative;
+	border: 20px solid darkviolet;
+
+}
+.h12{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+}
+.h6{
+	position: absolute;
+	left: 140px;
+	bottom: 1px;
+	font-size: 30px;
+}
+.h9{
+	position: absolute;
+	left: 7px;
+	top: 133px;
+	font-size: 30px;
+}
+
+.h3{
+	position: absolute;
+	right: 6px;
+	top: 133px;
+	font-size: 30px;
+}
+.h11{
+	position: absolute;
+	left: 70px;
+	top: 23px;
+	font-size: 20px;
+}
+
+.h1{
+	position: absolute;
+	right: 73px;
+	top: 22px;
+	font-size: 20px;
+}
+.h10{
+	position: absolute;
+	left: 23px;
+	top: 73px;
+	font-size: 20px;
+}
+
+.h2{
+	position: absolute;
+	right: 25px;
+	top: 72px;
+	font-size: 20px;
+}
+
+.h8{
+	position: absolute;
+	left: 23px;
+	bottom: 72px;
+	font-size: 20px;
+}
+.h4{
+	position: absolute;
+	right: 23px;
+	bottom: 73px;
+	font-size: 20px;
+}
+
+.h7{
+	position: absolute;
+	left: 70px;
+	bottom: 23px;
+	font-size: 20px;
+}
+
+.h5{
+	position: absolute;
+	right: 73px;
+	bottom: 22px;
+	font-size: 20px;
+}
+.minute{
+	width: 5px;
+	height: 90px;
+	background-color: black;
+	position: absolute;
+	left: 148px;
+	top: 60px;
+	animation-name: minrotate;
+	animation-duration: 30s ;
+	transform-origin: bottom center;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+.minute>.arrow{
+	transform: rotate(225deg);
+	border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+    position: absolute;
+    left: -5px;
+}
+
+
+.hour{
+
+	position: absolute;
+	top: 148px;
+	left: 63px;
+
+	border-right: 85px solid black;
+	border-top:0px solid black;
+	border-bottom: 5px solid black;
+	
+	animation-name: hourrotate;
+	animation-duration: 400s;
+	transform-origin:right center;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.hour>.arrow{
+	transform: rotate(315deg);
+	border: solid black;
+    border-width: 5px 0 0 5px;
+    display: inline-block;
+    padding: 5px;
+    position: absolute;
+    top: -5px;
+    left: -4px;
+   
+}
+
+
+.second{
+	width: 2px;
+	height: 105px;
+	background-color: black;
+	position: absolute;
+	right: 147px;
+	top: 47px;
+	transform: rotate(100deg);
+	animation-name: secrotate;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	transform-origin: bottom center;
+
+}
+.second>.arrow{
+	transform: rotate(225deg);
+	border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    position: absolute;
+    left: -3px;
+}
+
+
+
+.centerpoint{
+	
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: black;
+
+	display:block;
+	position: absolute;
+	left: 147px;
+	top: 147px;
+	
+}
+@keyframes secrotate{
+	from{
+		transform: rotate(0deg);
+
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+@keyframes minrotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes hourrotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
